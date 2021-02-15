@@ -36,19 +36,20 @@ var_dump($cdCollection);
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>php-oop-1</title>
     </head>
     <body>
        <ol>
            <?php foreach ($cdCollection as $cd) { ?>
                <li><h2> <?php echo $cd -> title ?> </h2></li>
-               
+               <li id="li_invisible">
                    <ul>
                        <li><h2> <?php echo $cd -> artist ?> </h2></li>
                        <li> <h2> <?php echo $cd -> genre  ?> </h2></li>
                        <li> <h2> <?php echo $cd -> year ?> </h2></li>
                     </ul>
-                
+                </li>
                
             <?php } ?>
            </ol>
