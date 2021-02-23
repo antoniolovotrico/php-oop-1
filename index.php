@@ -26,7 +26,7 @@ $punkInDrublic = new CdCollection('NOFX','Punk','Punk in Drublic',1994);
 $keeper = new CdCollection('Helloween','Power Metal','Keeper of the Seven Keys',1987);
 
 $cdCollection = [$nevermind,$ten,$punkInDrublic,$keeper];
-var_dump($cdCollection);
+
 
 ?>
 
@@ -41,8 +41,9 @@ var_dump($cdCollection);
     </head>
     <body>
        <ol>
-           <?php foreach ($cdCollection as $cd) { ?>
-               <li><h2> <?php echo $cd -> title ?> </h2></li>
+           <?php foreach ($cdCollection as $key => $cd) { ?>
+            
+               <li><h2> <?php echo $cd -> title   ?> </h2></li>
                <li id="li_invisible">
                    <ul>
                        <li><h2> <?php echo $cd -> artist ?> </h2></li>
